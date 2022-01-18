@@ -14,7 +14,6 @@ import { HomeData, CardData } from "./HomeData";
 import Searchbar from "./Searchbar";
 
 const Home = () => {
-  const [state, setstate] = useState("green")
   return (
     <View>
       <ScrollView showsVerticalScrollIndicator={true}>
@@ -137,7 +136,7 @@ const styles = StyleSheet.create({
   },
   hello3: {
     backgroundColor: "#c0392b",
-    
+    marginRight:-10    
   },
   
 });
