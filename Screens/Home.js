@@ -14,11 +14,15 @@ import { HomeData, CardData } from "./HomeData";
 import Searchbar from "./Searchbar";
 import Product from './Product'
 
+
 const Home = ({navigation}) => {
   // const clickMe = (index) => {
   //   alert(index)
   // }
   
+
+const Home = () => {
+
   return (
     <View>
       <ScrollView showsVerticalScrollIndicator={true}>
@@ -138,5 +142,9 @@ const styles = StyleSheet.create({
   },
   hello3: {
     backgroundColor: "#c0392b",
+
+
+    marginRight:-10    
+
   },
 });
