@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import {
   StyleSheet,
   Text,
@@ -12,8 +12,17 @@ import {
 
 import { HomeData, CardData } from "./HomeData";
 import Searchbar from "./Searchbar";
+import Product from './Product'
+
+
+const Home = ({navigation}) => {
+  // const clickMe = (index) => {
+  //   alert(index)
+  // }
+  
 
 const Home = () => {
+
   return (
     <View>
       <ScrollView showsVerticalScrollIndicator={true}>
@@ -36,15 +45,11 @@ const Home = () => {
               }}
             >
               {HomeData.map((item, index) => {
-                {
-                  /* console.log(index) */
-                }
                 return (
-                  <View onPress={() => alert(index)}>
+                  <View >
                     <TouchableOpacity
                       activeOpacity={0.9}
-                      onPress={() => alert(index)}
-                      // onPress={() => clickMe()}
+                      onPress={() => navigation.navigate("Product")}
                     >
                       <View key={index}>
                         <Image
@@ -91,7 +96,11 @@ const Home = () => {
               >
                 {CardData.map((items, index) => {
                   return (
-                    <View style={[styles.helloo,styles[`hello${index}`]]} key={index}>
+                    <View
+                    key={index}
+                      style={[styles.helloo, styles[`hello${index}`]]}
+                      
+                    >
                       <Image
                         source={items.image}
                         style={{
@@ -115,7 +124,6 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-
   helloo: {
     flexDirection: "row",
     marginTop: 20,
@@ -126,8 +134,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 
-  
-  
   hello1: {
     backgroundColor: "#e67e22",
   },
@@ -136,7 +142,9 @@ const styles = StyleSheet.create({
   },
   hello3: {
     backgroundColor: "#c0392b",
+
+
     marginRight:-10    
+
   },
-  
 });
