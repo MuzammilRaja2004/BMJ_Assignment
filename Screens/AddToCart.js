@@ -1,14 +1,14 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 const AddToCart = () => {
-    return (
-        <View>
-            
-        </View>
-    )
-}
+  return (
+    <View>
+      <Text>Add To Cart</Text>
+    </View>
+  );
+};
 
-export default AddToCart
+export default AddToCart;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

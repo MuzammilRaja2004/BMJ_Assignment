@@ -11,8 +11,12 @@ import {
 } from "react-native";
 import Searchbar from "./Searchbar";
 import { pdtData } from "./HomeData";
-import AddToCart from './AddToCart'
-const Product = ({navigation}) => {
+import AddToCart from "./AddToCart";
+
+const Product = ({ navigation }) => {
+
+
+
   return (
     <View>
       <Searchbar />
@@ -47,8 +51,10 @@ const Product = ({navigation}) => {
                       <Text style={{ fontSize: 25, color: "white" }}>
                         {items.Price}
                       </Text>
-                      <TouchableOpacity onPress={() => navigation.navigate('AddToCart')}>
-                        <Text style={{color:'white',}}>Add To Cart</Text>
+                      <TouchableOpacity
+                        onPress={() => navigation.navigate("AddToCart")}
+                      >
+                        <Text style={{ color: "white" }}>Add To Cart</Text>
                       </TouchableOpacity>
                     </View>
                   </View>
